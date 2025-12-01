@@ -1,4 +1,4 @@
-# Classification Model for Megaline's Tariff Plan Recommendations
+# Megaline's Tariff Plan Recommendations (Classification Model)
 
 ## 🎯 Project Objective
 
