@@ -40,7 +40,7 @@ These projects demonstrate competency in the following core areas:
 | :--- | :--- | :--- | :--- |
 | **[Customer Churn Prediction (Final Project)](./Customer_Churn_Prediction-(Final_Project))** | Classification (Gradient Boosting) | Integrating multiple data sources & maximizing AUC-ROC. | **AUC-ROC: 0.86** (Target: ≥0.81) |
 | **[Time Series Forecasting for Taxi Orders](./Time_Series_Forecasting_for_Taxi_Orders)** | Time Series Regression | Predicting demand peaks using `LightGBM` and time-based features. | **RMSE: 45.4** (Target: ≤48) |
-| **[Beta Bank Retention](./beta-bank_churn_prediction)** | Classification (Imbalanced Data) | Handling severe class imbalance using Upsampling & Class Weighting. | **F1 Score: 0.61** (Target: ≥0.59) |
+| **[Customer Churn Prediction for Beta Bank](./Customer_Churn_Prediction_for_Beta_Bank)** | Classification (Imbalanced Data) | Handling severe class imbalance using Upsampling & Class Weighting. | **F1 Score: 0.61** (Target: ≥0.59) |
 | **[Megaline Plan Recommendation](./megaline_plan_recommendation)** | Classification (Model Selection) | Comparing Decision Trees vs. Random Forests for accuracy optimization. | **Accuracy: 80.4%** (Target: ≥0.75) |
 
 <br>
