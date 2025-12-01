@@ -1,66 +1,52 @@
-# Applied Data Science Bootcamp Portfolio 🚀
+# Customer Churn Prediction for Interconnect Telecom
 
-> **A collection of foundational Machine Learning projects developed during the TripleTen Data Science Bootcamp.**
+## 🎯 Project Objective
 
-<br>
-<br>
+The telecommunications provider Interconnect aimed to forecast its customer churn rate. By identifying customers likely to terminate their service, the company could proactively offer them promotional codes and special plan options to improve retention, a strategy more cost-effective than acquiring new customers.
 
----
-
-## 📌 Repository Context & Purpose
-This repository serves as a **digital archive of my early work** in Data Science. It contains four comprehensive projects completed as part of an intensive professional training program. 
-
-Unlike my current production-grade work (which focuses on scalable pipelines, custom transformers, and advanced architecture), these projects were developed to strictly adhere to **academic workflows**. They represent the "building blocks" of my technical knowledge, showcasing my ability to:
-* Follow a structured Data Science lifecycle (EDA → Preprocessing → Modeling → Evaluation).
-* Meet specific business metric thresholds (RMSE, F1-Score, AUC-ROC).
-* Utilize the standard Python Data Science stack effectively.
-
-For my latest, professional-standard work, please visit my main profile: [**MiltonValleL**](https://github.com/MiltonValleL).
-
-<br>
-<br>
+> The primary goal was to build a robust classification model to predict customer churn. The key evaluation metric for this project was the **AUC-ROC score**, with a target of achieving **at least 0.88** on the test set. Accuracy was also measured as a secondary metric.
 
 ---
 
-## 🛠️ Technical Foundation
-These projects demonstrate competency in the following core areas:
-* **Languages:** Python (3.x).
-* **Libraries:** Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Statsmodels.
-* **Advanced Modeling:** LightGBM, CatBoost, RandomForest, Logistic Regression.
-* **Techniques:** Time Series Decomposition, Class Imbalance Handling (Upsampling/Weighting), Hyperparameter Tuning (GridSearchCV), Cross-Validation.
+## 🛠️ Tech Stack
 
-<br>
-<br>
-
----
-
-## 📂 Project Archive Overview
-
-| Project | Type | Key Challenge | Result / Metric |
-| :--- | :--- | :--- | :--- |
-| **[Customer Churn Prediction (Final Project)](./telecom_churn_prediction)** | Classification (Gradient Boosting) | Integrating multiple data sources & maximizing AUC-ROC. | **AUC-ROC: 0.86** (Target: ≥0.80) |
-| **[Taxi Orders Forecasting](./taxi_orders_forecasting)** | Time Series Regression | Predicting demand peaks using `LightGBM` and time-based features. | **RMSE: 45.4** (Target: ≤48) |
-| **[Beta Bank Retention](./beta-bank_churn_prediction)** | Classification (Imbalanced Data) | Handling severe class imbalance using Upsampling & Class Weighting. | **F1 Score: 0.61** (Target: ≥0.59) |
-| **[Megaline Plan Recommendation](./megaline_plan_recommendation)** | Classification (Model Selection) | Comparing Decision Trees vs. Random Forests for accuracy optimization. | **Accuracy: 80.4%** (Target: ≥0.75) |
-
-<br>
-<br>
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=Jupyter&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![CatBoost](https://img.shields.io/badge/CatBoost-5A2BE2?style=for-the-badge&logo=catboost&logoColor=white)
+![LightGBM](https://img.shields.io/badge/LightGBM-006400?style=for-the-badge&logo=lightgbm&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=matplotlib&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=seaborn&logoColor=white)
 
 ---
 
-## 💡 Evolution of Code
-*Reflecting on these projects allows me to measure my growth as a Data Scientist.*
+## 🚀 Project Workflow
 
-While the code in this repository follows a linear, instructional "notebook style," it laid the groundwork for my current methodology, which prioritizes:
-1.  **Modular Programming:** Moving from notebooks to scripts (`.py`).
-2.  **Pipelines:** Using `sklearn.pipeline` for reproducibility.
-3.  **Business Logic:** Translating metrics into actionable insights.
+This project involved a comprehensive workflow to tackle a real-world churn prediction problem:
 
-Feel free to explore these folders to see the starting point of my journey!
-
-<br>
+1.  **Data Integration & Preprocessing:** Data was collected from four different sources (`contract.csv`, `personal.csv`, `internet.csv`, `phone.csv`) and merged into a single, unified dataset. The data was then cleaned by handling missing values and correcting data types.
+2.  **Exploratory Data Analysis (EDA):** An analysis was conducted to understand the customer demographics, service usage, and the distribution of the target variable (`Exited`), which revealed a significant class imbalance.
+3.  **Feature Preparation:** Categorical features were converted into a machine-learning-friendly format using **One-Hot Encoding**.
+4.  **Model Training & Tuning:** Several classification models were trained and evaluated, including `LogisticRegression`, `RandomForestClassifier`, and more advanced gradient boosting models like `CatBoostClassifier` and `LGBMClassifier`.
+5.  **Hyperparameter Optimization:** **GridSearchCV** was employed to systematically search for the optimal hyperparameters for the boosting models to maximize the AUC-ROC score.
+6.  **Final Evaluation:** The best-performing model, `LGBMClassifier`, was selected and its final performance was validated on the unseen test set.
 
 ---
 
-*Maintained by Milton R. Valle Lora*
+## 📊 Results & Conclusion
 
+> The final, tuned **LGBMClassifier** demonstrated outstanding performance on the test set, significantly exceeding the project's target metric.
+>
+> -   **Final Test AUC-ROC:** **0.86**
+> -   **Final Test Accuracy:** **81.2%**
+> -   **Project Goal (AUC-ROC):** >= 0.81
+
+💡 The model was a resounding success. By integrating multiple data sources and using a powerful, well-tuned gradient boosting model, a highly accurate tool for predicting customer churn was developed. This model provides Interconnect with the ability to proactively identify at-risk customers and implement targeted retention strategies, ultimately reducing revenue loss.
+
+---
+
+## 📁 Project Context
+
+This was my **final graduation project** for the **TripleTen Data Science Bootcamp**. It showcases a complete, end-to-end machine learning project, from data integration and cleaning to advanced modeling and hyperparameter tuning. The notebook includes feedback from my project reviewer, highlighting the iterative process of refining a data science solution.
